@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'localizations_app.dart';
 
 class LocalizationsAppDelegate extends LocalizationsDelegate<LocalizationsApp> {
+  static List<String> supported = ['pt', 'en'];
   const LocalizationsAppDelegate();
 
   @override
   bool isSupported(Locale locale) {
-    return ['pt', 'en'].contains(locale.languageCode);
+    return supported.contains(locale.languageCode);
   }
 
   @override
